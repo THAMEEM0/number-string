@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function numInStr(arr) {
+        result = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          str = arr[i];
+          for (let j = 0; j < str.length; j++) {
+            if (!isNaN(parseInt(str[j]))) {
+              // if (!isNaN(str[j])) {
+              // Check if the character is a numeric digit
+              result.push(str);
+              break;
+            }
+          }
+        }
+
+        return result;
+      }
+
+      document.write(numInStr(["abc", "abc10"]));
+      document.write("<br>");
+      document.write(numInStr(["abc", "ab10c", "a10bc", "bcd"]));
+      document.write("<br>");
+      document.write(numInStr(["1", "a", " ", "b"]));
+      document.write("<br>");
+      document.write(numInStr(["rct", "ABC", "Test", "xYz"]));
+      document.write("<br>");
+      document.write(numInStr(["this IS", "10xYZ", "xy2K77", "Z1K2W0", "xYz"]));
+      document.write("<br>");
+      document.write(numInStr(["-/>", "10bc", "abc "]));
+    </script>
+  </body>
+</html>
