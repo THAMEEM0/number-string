@@ -210,21 +210,21 @@
         },
       ];
 
-      const customers_with_amount = [];
+       customers_with_amount = [];
 
       for (let i = 0; i < customers.length; i++) {
-        const customer = customers[i];
+         customer = customers[i];
 
         let totalSpent = 0;
 
         for (let j = 0; j < orders.length; j++) {
-          const order = orders[j];
+           order = orders[j];
 
           if (order.customer_id === customer.id) {
             let orderSum = 0;
 
             for (let k = 0; k < order.products.length; k++) {
-              const product = order.products[k];
+               product = order.products[k];
 
               orderSum += product.price;
             }
